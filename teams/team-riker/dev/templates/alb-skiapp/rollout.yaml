@@ -19,6 +19,9 @@ spec:
       containers:
       - name: skiapp
         image: sharepointoscar/skiapp:v2
+        env:
+          - name: ENABLE_TRACING
+            value: 'true'
         imagePullPolicy: Always
         ports:
         - name: http
